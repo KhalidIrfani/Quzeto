@@ -48,12 +48,12 @@ const scheduleSchema = new mongoose.Schema({
     },
     userId: {
         type: mongoose.Schema.Types.ObjectId,
-        ref: User, // Reference to the User model
+        ref: User,  
         required: true,
     },
     questionId: [{
         type: mongoose.Schema.Types.ObjectId,
-        ref: Question,    // Reference to the Question model
+        ref: Question,    
     }],
     
     totalParticipant: {

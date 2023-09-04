@@ -168,7 +168,7 @@ const getScheduleById = async (req, res) => {
     }
 };
 
-
+// Delete Schedule
 const deleteSchedule = async (req, res) => {
     try {
         const { scheduleId } = req.params;
@@ -187,7 +187,7 @@ const deleteSchedule = async (req, res) => {
     }
 };
 
-
+// Update Schedule
 const updateSchedule = async (req, res, next) => {
     try {
         const { scheduleId } = req.params;

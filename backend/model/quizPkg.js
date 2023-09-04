@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 const User = require('./user')
 const Question = require('./question')
 
-// Define the schema for the quizpkg model
+
 const quizpkgSchema = new mongoose.Schema({
     title: {
         type: String,
@@ -20,29 +20,29 @@ const quizpkgSchema = new mongoose.Schema({
         type: String,
     },
     startTime: {
-        type: String, // You can change this to Date if needed
+        type: String
     },
     endTime: {
-        type: String, // You can change this to Date if needed
+        type: String
     },
     duration: {
-        type: String, // You can change this to Number if needed
+        type: String, 
     },
     quantity: {
         type: Number,
     },
     userId: {
         type: mongoose.Schema.Types.ObjectId,
-        ref: User, // Reference to the User model
+        ref: User, 
         required: true,
     },
     questionId: [{
         type: mongoose.Schema.Types.ObjectId,
-        ref: Question,    // Reference to the Question model
+        ref: Question,    
     }],
 });
 
-// Create a quizpkg model using the schema
+
 const Quizpkg = mongoose.model('quizpkg', quizpkgSchema);
 
 module.exports = Quizpkg;

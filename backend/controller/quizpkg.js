@@ -1,8 +1,10 @@
 const express = require('express');
 const Quizpkg = require('../model/quizPkg')
-const Question = require('../model/question'); // Adjust the path to your Question model
+const Question = require('../model/question'); 
 const user = require('../model/user');
 
+
+// Create Quiz Package
 const quizpkg = async (req, res) => {
     try {
 
@@ -38,10 +40,10 @@ const quizpkg = async (req, res) => {
     }
 }
 
-
+// get All quiz pkg
 const getAllpkg = async (req, res) => {
     try {
-        const quizpkg = await Quizpkg.find(); // Retrieve all schedules from the database
+        const quizpkg = await Quizpkg.find(); 
         res.status(200).json(quizpkg);
     } catch (error) {
         console.error('Error fetching schedule data:', error);

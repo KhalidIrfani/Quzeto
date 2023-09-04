@@ -22,7 +22,7 @@ const questionSchema = new mongoose.Schema({
     },
     createdBy: {
         type: mongoose.Schema.Types.ObjectId,
-        ref: User, // Replace 'User' with the name of your User model
+        ref: User, 
     },
 
 });

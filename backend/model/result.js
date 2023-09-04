@@ -4,9 +4,9 @@ const user = require("./user");
 const schedule = require("./schedule");
 
 const resultSchema = new mongoose.Schema({
-    userId: { // You can include user-related information here
+    userId: { 
         type: mongoose.Schema.Types.ObjectId,
-        ref: user, // Reference to the User model (if applicable)
+        ref: user,  
     },
     quizId: {
         type: mongoose.Schema.Types.ObjectId,
@@ -14,7 +14,7 @@ const resultSchema = new mongoose.Schema({
     },
     questions: [{
         question: {
-            type: String // Reference to the Question model
+            type: String  
         },
         selectedAnswer: {
             type: String,

@@ -2,6 +2,8 @@ const express = require('express');
 const Answer = require('../model/result');
 const Question = require('../model/question');
 
+
+// Submit the result
 const submitResult = async (req, res) => {
     try {
         const {
@@ -52,7 +54,7 @@ const submitResult = async (req, res) => {
     }
 };
 
-
+// get result
 const getResults = async (req, res) => {
     try {
         const answer = await Answer.find().populate('quizId');
@@ -68,6 +70,7 @@ const getResults = async (req, res) => {
     }
 }
 
+// Get  result by resultId
 const getResult = async (req, res) => {
     try {
         const resultId = req.params.id;
@@ -84,6 +87,8 @@ const getResult = async (req, res) => {
     }
 };
 
+
+// get result by userId
 const result = async (req, res) => {
     try {
         const Id = req.params.id
