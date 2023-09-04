@@ -1,6 +1,7 @@
 const express = require('express');
-const Question = require('../model/question'); // Assuming the correct path to the Question model
+const Question = require('../model/question');
 
+// Create Mcq's
 const questions = async (req, res, next) => {
   try {
     const { question, correctAnswer, options, type, subject } = req.body;
@@ -30,6 +31,9 @@ const questions = async (req, res, next) => {
   }
 };
 
+
+
+// Create Fill in blanks
 const fillInBlanks = async (req, res, next) => {
   try {
     const { question, correctAnswer, type, subject } = req.body;
@@ -59,6 +63,8 @@ const fillInBlanks = async (req, res, next) => {
   }
 };
 
+
+// Get All Questions
 const getAllQuestions = async (req, res, next) => {
   try {
     const regularQuestions = await Question.find(); // Adjust the type as needed
