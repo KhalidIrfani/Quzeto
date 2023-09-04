@@ -65,7 +65,7 @@ const FAQ = () => {
                         <div className="question flex justify-between  items-center  cursor-pointer" onClick={() => handleToggle(index)}>
                             <div className="flex">
                                 <span className='text-[#00459E]  font-bold px-2'>{details.number}</span>
-                                <h3 className="text-lg font-semibold px-3">{details.question}</h3>
+                                <h3 className="text-lg font-semibold px-2">{details.question}</h3>
                             </div>
                             <div className="flex justify-end items-center pt-1 ">
                                 <span className={expandedStates[index] ? "plus-icon hidden" : "plus-icon mr-2"}>
@@ -78,7 +78,7 @@ const FAQ = () => {
                         </div>
                         {expandedStates[index] && (
                             <div className="answer mt-2">
-                                <p className='px-16'>{details.answer}</p>
+                                <p className='px-[2.7rem]'>{details.answer}</p>
                             </div>
                         )}
                     </div>
