@@ -1,0 +1,7 @@
+POST http://localhost:8000/api/schedule/paidRegister/64c7699eccd7ddb7ce88fbdb
+Content-Type: application/json
+
+{
+  "title": "New Post",
+  "body": "This is the content of the post." 
+}
