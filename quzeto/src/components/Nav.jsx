@@ -77,7 +77,7 @@ const Nav = (prop) => {
                                 />
 
                                 {menuVisible && (
-                                    <div className="profile-image-menu z-10 absolute text-center gap-3 rounded-md w-[7%]  py-3 right-6 bg-[#ffff]">
+                                    <div className="profile-image-menu z-10 absolute text-center gap-3 rounded-md md:w-[8%] w-[20%]  py-3 right-6 bg-[#ffff]">
                                         <button className="menu-item">Profile</button>
                                         <button className="menu-item">Home</button>
                                         <button onClick={logout} className="menu-item text-black">Logout</button>

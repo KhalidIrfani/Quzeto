@@ -132,13 +132,7 @@ function App() {
             </ProtectedRoute>
           } />
 
-
-
-
-
-
         </Routes>
-
 
         <ToastContainer
           position="bottom-center"
