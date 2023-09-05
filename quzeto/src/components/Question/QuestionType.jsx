@@ -104,9 +104,9 @@ console.log(id)
                                     >
                                         <option value="">Select category</option>
                                         <option value="Science">Science</option>
-                                        <option value="History">Mathematics</option>
-                                        <option value="History">SEE</option>
-                                        <option value="History">AI</option>
+                                        <option value="Mathematics">Mathematics</option>
+                                        <option value="SEE">SEE</option>
+                                        <option value="AI">AI</option>
                                     </select>
 
                                 </div>

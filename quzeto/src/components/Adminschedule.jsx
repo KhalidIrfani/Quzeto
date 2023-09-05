@@ -88,8 +88,6 @@ const Adminschedule = () => {
                                             <th className="py-2 px-2  text-base font-semibold">Quiz Type</th>
                                             <th className="py-2 px-2  text-base font-semibold">Questons</th>
                                             <th className="py-2 px-2  text-base font-semibold">Registration Fee</th>
-                                            <th className="py-2 px-2  text-base font-semibold">Winner</th>
-                                            <th className="py-2 px-2  text-base font-semibold">Rank of all Users</th>
                                         </tr>
                                     </thead>
 
@@ -102,15 +100,7 @@ const Adminschedule = () => {
                                                 <td className=" text-center">{scheduleItem.type}</td>
                                                 <td className=" text-center">{scheduleItem.questionId.length}</td>
                                                 <td className=" text-center ">{scheduleItem.registrationFee}</td>
-                                                <td className="flex gap-1  mx-2 justify-center items-center mt-4">
-                                                    {/* <Link to={`/updateschedule/${scheduleItem._id}`}>
-                                                    <button className="bg-[#00439A] hover:bg-blue-800 text-white font-bold text-center rounded-full h-[20px] w-[20px]"><AiTwotoneEye className='ml-[.17rem] text-[.9rem]' /></button>
-                                                </Link>
-                                                <Link to={`/updateschedule/${scheduleItem._id}`}>
-                                                    <button className="bg-[#FFB125] hover:bg-orange-400 text-white font-bold text-center rounded-full h-[20px] w-[20px]"><TfiPencil className='ml-[.16rem] text-[.9rem]' /></button>
-                                                </Link>
-                                                <button onClick={() => handleDeleteSchedule(scheduleItem._id)} className="bg-[#E32828] hover:bg-red-700 text-white font-bold text-center rounded-full h-[20px] w-[20px]"><RiDeleteBin6Line className='ml-[.18rem] text-[.9rem]' /></button> */}
-                                                </td>
+                                                
                                             </tr>
                                         ))}
                                     </tbody>

@@ -72,18 +72,13 @@ const Quizcard = (props) => {
 
     const handleRegister = async () => {
         try {
-            const now = new Date().getTime();
-            if (props.startTime <= now) {
-                await axios.post(`${server}schedule/registerQuiz`, {
-                    quizId: props._id,
-                    userId: userId._id
-                })
-                setUserRegistered(true);
-                toast.success('User registered successfully')
-            }
-            else {
-                toast.error("registeration time has been ended")
-            }
+            await axios.post(`${server}schedule/registerQuiz`, {
+                quizId: props._id,
+                userId: userId._id
+            })
+            setUserRegistered(true);
+            toast.success('User registered successfully')
+
         } catch (error) {
             toast.error('Failed to register user');
             console.log(error)
@@ -93,8 +88,7 @@ const Quizcard = (props) => {
 
     const handlePaidQuiz = async () => {
         try {
-            const now = new Date().getTime();
-            if (userId.freequzeto >= props.registrationFee && props.startTime <= now) {
+            if (userId.freequzeto >= props.registrationFee) {
                 await axios.post(`${server}schedule/registerQuiz`, {
                     quizId: props._id,
                     userId: userId._id
@@ -129,6 +123,8 @@ const Quizcard = (props) => {
         } else {
             if (!userRegistered) {
                 toast.error('Please register to play the quiz.');
+            } else if (startTime < now) {
+                toast.error('Quiz time has been ended')
             }
             else if (startTime > now) {
                 toast.error('Quiz has not started yet.');

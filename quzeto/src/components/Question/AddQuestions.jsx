@@ -60,7 +60,7 @@ const AddQuestions = ({ subject, type }) => {
 
             // console.log(response.data);
             toast.success('Question Added Successfully!');
-            navigate('/dashboard')
+            navigate('/questiontype')
         } catch (error) {
             if (error.response && error.response.status === 400 && error.response.data.error) {
                 toast.error('Question with the same content already exists');
