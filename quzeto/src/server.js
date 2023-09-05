@@ -1,3 +1,3 @@
-export const server = "https://quzeto.vercel.app/api"
+export const server = "http://localhost:8000/api/"
 
-export const backend_url = "https://quzeto.vercel.app/"
+export const backend_url = "http://localhost:8000/"
