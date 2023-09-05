@@ -15,8 +15,8 @@ const quizRoute=require('./routes/quizpkg')
 app.use(express.json());
 app.use(cookieParser());
 app.use(cors({
-    // origin: 'http://localhost:3000',
-    origin:'',
+    origin: 'http://localhost:3000',
+    // origin:'',
     credentials: true,
     methods: ['GET', 'POST', 'PUT', 'DELETE', 'HEAD'],
 }));
