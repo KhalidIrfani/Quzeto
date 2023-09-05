@@ -1,4 +1,4 @@
-GET http://localhost:8000/api/schedule/getSchedule
+GET http://localhost:8000/api/question/questions/:questionId
 Content-Type: application/json
 
 {
