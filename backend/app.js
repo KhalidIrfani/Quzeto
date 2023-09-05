@@ -29,6 +29,11 @@ if (process.env.NODE_ENV !== "PRODUCTION") {
     })
 }
 
+app.get('/' , (req ,res)=>{
+    res.json("Hello api")
+  })
+  
+
 app.use('/api/auth', authRoute)
 app.use('/api/question', questionRoute)
 app.use('/api/schedule', scheduleRoute)
