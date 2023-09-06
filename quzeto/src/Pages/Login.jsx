@@ -29,7 +29,7 @@ const Login = () => {
             console.log(response.data)
             toast.success('Login Success!');
             navigate('/dashboard');
-            // window.location.reload();
+            window.location.reload();
 
         } catch (error) {
             // Handle other errors if needed

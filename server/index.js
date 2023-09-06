@@ -22,7 +22,7 @@ app.use(cookieParser());
 
 app.use(
     cors({
-        origin: "https://quzeto-m.vercel.app",
+        origin: "https://localhost:3000",
         methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
         credentials: true,
     })
