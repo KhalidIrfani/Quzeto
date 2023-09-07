@@ -12,10 +12,6 @@ import Payment from './Pages/StaticsPage/Payment';
 import FAQ from './Pages/StaticsPage/FAQ';
 import Career from './Pages/StaticsPage/Career';
 import ProtectedRoute from './routes/protectedRoute';
-import Dasboard from './Pages/Dasboard';
-import { useEffect } from 'react';
-import Store from './redux/store';
-import { loaduser } from './redux/action/user';
 import QuestionTypes from './Pages/QuestionTypes';
 import Schedule from './Pages/Schedule';
 import AttemptQuiz from './Pages/AttemptQuiz';
@@ -29,14 +25,15 @@ import Admincontrol from './components/Admincontrol';
 import Adminschedule from './components/Adminschedule';
 import UserSchedulequiz from './components/Schedule/UserSchedulequiz';
 import Quizpackg from './components/Quizpackg';
+import Store from './redux/store';
+import { useEffect } from 'react';
+import { loaduser } from './redux/action/user';
 
 function App() {
-
 
   useEffect(() => {
     Store.dispatch(loaduser())
   })
-
 
   return (
     <>
@@ -72,7 +69,7 @@ function App() {
 
           <Route path='/packages' element={
             <ProtectedRoute>
-              <Quizpackg/>
+              <Quizpackg />
             </ProtectedRoute>
           } />
 

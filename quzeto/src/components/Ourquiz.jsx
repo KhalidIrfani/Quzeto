@@ -8,6 +8,7 @@ const Ourquiz = () => {
     const [PackageData, setPackageData] = useState([]); // Initialize PackageData as an empty array
 
     useEffect(() => {
+
         axios.get(`${server}quizpkg/getAllpkg`)
             .then(response => {
                 setPackageData(response.data);
