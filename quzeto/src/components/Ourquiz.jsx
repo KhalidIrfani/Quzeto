@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import laptop from '../assets/laptop.png'
 import Pkgcard from './Pkgcard'
-import axios from 'axios'
 import { server } from '../server'
+import axios from '../libs/axios'
 
 const Ourquiz = () => {
     const [PackageData, setPackageData] = useState([]); // Initialize PackageData as an empty array
@@ -10,7 +10,7 @@ const Ourquiz = () => {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const response = await axios.get(`${server}quizpkg/getAllpkg`);
+                const response = await axios.get(`/quizpkg/getAllpkg`);
                 setPackageData(response.data);
             } catch (error) {
                 console.error('Error fetching package data:', error);

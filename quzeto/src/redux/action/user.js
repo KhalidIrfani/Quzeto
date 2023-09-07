@@ -1,5 +1,6 @@
-import axios from "axios";
-import { server } from "../../server";
+import axios from "../../libs/axios";
+
+
 
 export const loaduser = () => async (dispatch) => {
 
@@ -7,7 +8,7 @@ export const loaduser = () => async (dispatch) => {
         dispatch({
             type: "LoadUserRequest",
         })
-        const { data } = await axios(`${server}auth/getuser`, { withCredentials: true });
+        const { data } = await axios.get(`/auth/getuser`);
         dispatch({
             type: "LoadUserSuccess",
             payload: data.user
