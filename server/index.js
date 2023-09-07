@@ -22,9 +22,8 @@ app.use(cookieParser());
 
 app.use(
     cors({
-        origin: 'https://quzeto-rq6e.vercel.app',
-        credentials: true,
-        methods: ['GET', 'POST', 'PUT', 'DELETE', 'HEAD'],
+        origin: ['https://quzeto-rq6e.vercel.app',"https://quzeto-rq6e.vercel.app/"],
+        credentials: true
     })
 );
 
