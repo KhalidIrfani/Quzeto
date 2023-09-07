@@ -8,14 +8,16 @@ const Ourquiz = () => {
     const [PackageData, setPackageData] = useState([]); // Initialize PackageData as an empty array
 
     useEffect(() => {
-
-        axios.get(`${server}quizpkg/getAllpkg`)
-            .then(response => {
+        const fetchData = async () => {
+            try {
+                const response = await axios.get(`${server}quizpkg/getAllpkg`);
                 setPackageData(response.data);
-            })
-            .catch(error => {
+            } catch (error) {
                 console.error('Error fetching package data:', error);
-            });
+            }
+        };
+
+        fetchData();
     }, []);
     return (
         <>
