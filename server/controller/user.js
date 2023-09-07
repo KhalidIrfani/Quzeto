@@ -209,7 +209,7 @@ const logOut = async (req, res, next) => {
     try {
         res.cookie("token", "", {
             expires: new Date(0),
-            httpOnly: true,
+            // httpOnly: true,
         });
         res.status(201).json({
             success: true,
