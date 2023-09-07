@@ -22,7 +22,7 @@ app.use(cookieParser());
 
 app.use(
     cors({
-        origin: ['https://quzeto-rq6e.vercel.app',"https://quzeto-rq6e.vercel.app/"],
+        origin: ['https://quzeto-rq6e-qjx0ldmhg-khalidirfani.vercel.app',"https://quzeto-rq6e-qjx0ldmhg-khalidirfani.vercel.app/"],
         credentials: true
     })
 );
