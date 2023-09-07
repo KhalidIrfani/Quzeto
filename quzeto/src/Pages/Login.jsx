@@ -24,7 +24,7 @@ const Login = () => {
         try {
             // Make a POST request to your backend API to log in
             const response = await axios.post(`${server}auth/login`, values, {
-                withCredentials: true,
+                // withCredentials: true,
             });
             console.log(response.data)
             toast.success('Login Success!');
