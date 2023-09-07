@@ -1,7 +1,6 @@
 const express = require('express');
 const User = require('../model/user');
 const catchAsyncError = require('../middleware/catchAsyncError')
-const { isAuthenticated } = require('../middleware/auth');
 const ErrorHandler = require('../utils/ErrorHandler.js')
 const sendToken = require('../utils/JwtToken');
 const fs = require('fs');
