@@ -23,7 +23,7 @@ const Login = () => {
     const handleSubmit = async (values, { setSubmitting }) => {
         try {
             // Make a POST request to your backend API to log in
-            const response = await axios.post(`${server}auth/login`, values, {
+            const response = await axios.post(`http://localhost:8000/api/auth/login`, values, {
                 // withCredentials: true,
             });
             console.log(response.data)
